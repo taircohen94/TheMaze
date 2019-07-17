@@ -1,0 +1,41 @@
+
+.root {
+    /*-fx-background-image: url('background.png');*/
+    /*-fx-background-size: cover;*/
+    /*-fx-background-position: center center;*/
+    /*-fx-background-repeat: no-repeat;*/
+}
+
+Button {
+    -fx-text-fill: white;
+    -fx-font-family: "Forte";
+   -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#b14844, #581618);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+Button:hover{
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+     -fx-background-radius: 3px, 3px, 2px, 1px;
+     -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+     -fx-text-fill: WHITE;
+     -fx-alignment: CENTER;
+     -fx-content-display: LEFT;
+ }
+
+
+MenuButton {
+     -fx-font-family: "Forte";
+     -fx-font-weight: bold;
+     -fx-font-size: 18;
+     -fx-background-color: linear-gradient(#b14844, #581618);
+     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+
+ }
+MenuButton:hover{
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}

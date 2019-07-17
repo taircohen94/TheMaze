@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import View.MazeDisplayer?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<BorderPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#KeyPressed" onKeyReleased="#keyReleased" onScroll="#zoom" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+   <top>
+      <MenuBar blendMode="EXCLUSION" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#generateMaze" text="New" />
+                  <MenuItem mnemonicParsing="false" onAction="#save" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#load" text="Load" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Options">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#properties" text="Properties" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#about" text="About">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#help" text="help" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Exit">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#exit" text="exit" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefHeight="375.0" prefWidth="214.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="31.0" prefWidth="197.0">
+               <children>
+                  <Label fx:id="lbl_rowsNum" contentDisplay="CENTER" prefHeight="25.0" prefWidth="124.0" text="Maze rows:" textAlignment="CENTER" textOverrun="CLIP">
+                     <font>
+                        <Font name="Forte" size="16.0" />
+                     </font></Label>
+                  <TextField fx:id="text_rows" prefHeight="25.0" prefWidth="116.0" promptText="number of rows" text="10" />
+               </children>
+            </HBox>
+            <HBox prefHeight="38.0" prefWidth="197.0">
+               <children>
+                  <Label fx:id="lbl_columnsNum" prefHeight="19.0" prefWidth="128.0" text="Maze columns:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Forte" size="16.0" />
+                     </font></Label>
+                  <TextField fx:id="text_col" prefHeight="25.0" prefWidth="123.0" promptText="number of columns" text="10" />
+               </children>
+            </HBox>
+            <Button fx:id="btn_generateMaze" mnemonicParsing="false" onAction="#generateMaze" prefHeight="62.0" prefWidth="211.0" text="Generate Maze" textFill="#000000ed" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Button fx:id="btn_solveMaze" mnemonicParsing="false" onAction="#solveMaze" prefHeight="62.0" prefWidth="211.0" text="Solve Maze" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <MenuButton mnemonicParsing="false" prefHeight="52.0" prefWidth="212.0" text="Choose Your Player" textAlignment="JUSTIFY" textFill="#ffffffed" textOverrun="WORD_ELLIPSIS">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#Rio" text="Rio" />
+                <MenuItem mnemonicParsing="false" onAction="#Tokyo" text="Tokyo" />
+                <MenuItem mnemonicParsing="false" onAction="#Berlin" text="Berlin" />
+              </items>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </MenuButton>
+         </children>
+      </VBox>
+   </left>
+    <center>
+        <Pane fx:id="mazePane" BorderPane.alignment="CENTER">
+            <children>
+                <MazeDisplayer fx:id="mazeDisplayer" height="600.0" imageFileNameEnd="resources/Images/end.jpg" imageFileNamePath="resources/Images/path.jpg" imageFileNameSol="resources/Images/sol.jpg" imageFileNameWall="resources/Images/wall.jpg" onMouseClicked="#mouseClicked" width="600.0" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </Pane>
+
+    </center>
+</BorderPane>
