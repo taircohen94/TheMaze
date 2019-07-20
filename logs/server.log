@@ -311,3 +311,10 @@
 2019.06.18 13:33:40.901 INFO  Server.Server - Client excepted: Socket[addr=/192.168.56.1,port=51783,localport=5400]
 2019.06.18 13:34:22.499 INFO  Server.Server - Client excepted: Socket[addr=/192.168.56.1,port=51788,localport=5400]
 2019.06.18 13:34:26.998 INFO  Server.Server - Client excepted: Socket[addr=/192.168.56.1,port=51789,localport=5401]
+2019.07.20 14:36:49.447 INFO  Server.Server - Server starter at ServerSocket[addr=0.0.0.0/0.0.0.0,localport=5401]!
+2019.07.20 14:36:49.470 INFO  Server.Server - Server's Strategy: ServerStrategySolveSearchProblem
+2019.07.20 14:36:49.470 INFO  Server.Server - Server is waiting for clients...
+2019.07.20 14:36:49.463 INFO  Server.Server - Server starter at ServerSocket[addr=0.0.0.0/0.0.0.0,localport=5400]!
+2019.07.20 14:36:49.471 INFO  Server.Server - Server's Strategy: ServerStrategyGenerateMaze
+2019.07.20 14:36:49.472 INFO  Server.Server - Server is waiting for clients...
+2019.07.20 14:37:00.630 INFO  Server.Server - Client excepted: Socket[addr=/192.168.56.1,port=61160,localport=5400]
